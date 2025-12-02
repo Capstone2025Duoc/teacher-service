@@ -1,0 +1,15 @@
+{
+  "fecha": "2025-11-14",
+  "attendances": [
+    { "alumnoVinculoId": "6b949d13-d22c-431b-961e-519d3175c48e", "estado": "presente" },
+    { "alumnoVinculoId": "6d6099c8-346e-4133-9a63-e6d2e61da850", "estado": "presente" },
+    { "alumnoVinculoId": "3f219853-a7a9-4d43-8720-86ccae31b278", "estado": "tardanza" },
+    { "alumnoVinculoId": "6e0b25af-de60-457f-9b92-511b6c19473c", "estado": "presente" },
+    { "alumnoVinculoId": "2e3be4fe-c8e3-41ce-ad2e-7ef471fd6257", "estado": "ausente" },
+    { "alumnoVinculoId": "6d563efd-cb93-416a-bbff-19ce49c1c5c6", "estado": "presente" },
+    { "alumnoVinculoId": "e7d29653-6026-4ae4-8980-057d49973824", "estado": "presente" },
+    { "alumnoVinculoId": "312d70f6-92a2-4226-ab38-2013338d6ef7", "estado": "presente" },
+    { "alumnoVinculoId": "61ac34ce-2fb2-4a5c-9a38-df8f89b9c185", "estado": "presente" },
+    { "alumnoVinculoId": "c7e75475-265a-4290-ad19-baba2e269ee8", "estado": "tardanza" }
+  ]
+}
