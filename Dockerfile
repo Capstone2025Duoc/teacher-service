@@ -2,9 +2,8 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 RUN corepack enable && corepack prepare pnpm@latest --activate
 COPY package.json pnpm-lock.yaml ./
-# Use --no-frozen-lockfile temporarily to avoid build failures when lockfile
-# is not yet committed. Replace with --frozen-lockfile after syncing lockfile.
-RUN pnpm install --no-frozen-lockfile
+# Use frozen lockfile to ensure reproducible installs
+RUN pnpm install --frozen-lockfile
 COPY . ./
 RUN pnpm run build
 

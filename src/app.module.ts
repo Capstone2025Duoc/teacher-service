@@ -51,11 +51,13 @@ import { JwtAuthGuard } from './auth/jwt-auth.guard';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.DB_HOST ?? 'localhost',
-      port: parseInt(process.env.DB_PORT ?? '5432', 10),
-      username: process.env.DB_USER ?? 'sage_user',
-      password: process.env.DB_PASSWORD ?? 'sage_password',
-      database: process.env.DB_NAME ?? 'sage',
+      // Use full DATABASE_URL when available (recommended for Docker)
+      url: process.env.DATABASE_URL ?? undefined,
+      host: process.env.DATABASE_URL ? undefined : process.env.DB_HOST ?? 'localhost',
+      port: process.env.DATABASE_URL ? undefined : parseInt(process.env.DB_PORT ?? '5432', 10),
+      username: process.env.DATABASE_URL ? undefined : process.env.DB_USER ?? 'sage_user',
+      password: process.env.DATABASE_URL ? undefined : process.env.DB_PASSWORD ?? 'sage_password',
+      database: process.env.DATABASE_URL ? undefined : process.env.DB_NAME ?? 'sage',
       entities: [
         Vinculo,
         Materia,
